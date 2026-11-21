@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glorious Tribe Accounting Services | Year End 2026 – Aloha Formal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0d9488;
+      --teal-dark: #0f766e;
+      --coral: #f97316;
+      --sand: #fef3c7;
+      --cream: #fffbeb;
+      --deep: #134e4a;
+      --sky: #7dd3fc;
+      --ocean: #38bdf8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--deep);
+      min-height: 100vh;
+      overflow-x: hidden;
+      /* Beach-like gradient: sky → ocean → sand */
+      background: linear-gradient(
+        180deg,
+        #bae6fd 0%,
+        #7dd3fc 18%,
+        #38bdf8 35%,
+        #fef9c3 55%,
+        #fde68a 75%,
+        #fcd34d 100%
+      );
+      position: relative;
+    }
+
+    /* Soft overlay so content stays readable */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 20%, rgba(255,255,255,0.35) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ===== Decorative beach elements ===== */
+    .deco {
+      position: fixed;
+      z-index: 1;
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.22;
+    }
+
+    /* Big palm trees */
+    .palm {
+      font-size: 5rem;
+      opacity: 0.18;
+    }
+    .palm-1 { top: 4%; left: 2%; transform: rotate(-18deg); font-size: 5.5rem; }
+    .palm-2 { top: 12%; right: 3%; transform: rotate(22deg); font-size: 6rem; }
+    .palm-3 { bottom: 22%; left: 4%; transform: rotate(8deg); font-size: 4.5rem; }
+    .palm-4 { bottom: 12%; right: 5%; transform: rotate(-20deg); font-size: 5rem; }
+
+    /* Beach umbrella */
+    .umbrella {
+      font-size: 3.8rem;
+      opacity: 0.2;
+    }
+    .umbrella-1 { top: 28%; left: 8%; transform: rotate(-12deg); }
+    .umbrella-2 { top: 35%; right: 7%; transform: rotate(15deg); font-size: 3.2rem; }
+
+    /* Sun hat */
+    .hat {
+      font-size: 2.8rem;
+      opacity: 0.2;
+    }
+    .hat-1 { top: 48%; left: 5%; transform: rotate(-25deg); }
+    .hat-2 { bottom: 28%; right: 8%; transform: rotate(18deg); font-size: 2.4rem; }
+
+    /* Other beach items */
+    .shell { font-size: 1.8rem; opacity: 0.18; }
+    .shell-1 { top: 62%; left: 12%; }
+    .shell-2 { bottom: 18%; left: 18%; transform: rotate(30deg); }
+    .shell-3 { top: 55%; right: 14%; transform: rotate(-20deg); }
+
+    .flower {
+      font-size: 1.9rem;
+      opacity: 0.2;
+      animation: float 9s ease-in-out infinite;
+    }
+    .f1 { top: 20%; left: 15%; animation-delay: 0s; }
+    .f2 { top: 42%; right: 12%; animation-delay: 2.5s; }
+    .f3 { bottom: 32%; left: 22%; animation-delay: 5s; }
+    .f4 { top: 68%; right: 18%; animation-delay: 1.5s; }
+
+    /* Soft waves at the bottom */
+    .waves {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+    .waves svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-16px) rotate(6deg); }
+    }
+
+    /* ===== Content ===== */
+    header {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 2.8rem 1.5rem 0.8rem;
+    }
+
+    .company {
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-bottom: 0.55rem;
+      text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6.5vw, 3.9rem);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--deep);
+      margin-bottom: 0.35rem;
+      text-shadow: 0 2px 8px rgba(255,255,255,0.5);
+    }
+
+    .theme {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--coral), #ea580c);
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.48rem 1.5rem;
+      border-radius: 999px;
+      margin-top: 0.75rem;
+      box-shadow: 0 6px 18px rgba(249, 115, 22, 0.4);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 10;
+      max-width: 720px;
+      margin: 1.8rem auto 2.2rem;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 28px;
+      padding: 2.3rem 2rem 2.6rem;
+      box-shadow: 0 25px 60px rgba(13, 148, 136, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      text-align: center;
+    }
+
+    .event-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      color: var(--teal-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .dates {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--coral);
+      margin-bottom: 0.45rem;
+    }
+
+    .venue {
+      font-size: 1.08rem;
+      color: var(--deep);
+      margin-bottom: 1.9rem;
+      line-height: 1.45;
+    }
+
+    .venue strong {
+      color: var(--teal-dark);
+    }
+
+    .countdown-label {
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.05rem;
+      font-weight: 500;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .count-box {
+      background: linear-gradient(145deg, var(--teal), var(--teal-dark));
+      color: white;
+      border-radius: 18px;
+      min-width: 80px;
+      padding: 1.05rem 0.65rem 0.9rem;
+      box-shadow: 0 10px 24px rgba(13, 148, 136, 0.35);
+    }
+
+    .count-box .num {
+      font-size: 2.05rem;
+      font-weight: 600;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .count-box .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.92;
+      margin-top: 0.38rem;
+    }
+
+    .details {
+      position: relative;
+      z-index: 10;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      padding: 0 1.2rem;
+    }
+
+    @media (max-width: 560px) {
+      .details {
+        grid-template-columns: 1fr;
+      }
+      .palm, .umbrella, .hat {
+        opacity: 0.12;
+      }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 1.55rem 1.45rem;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.22rem;
+      color: var(--teal-dark);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .card p, .card ul {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: #334155;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      padding: 0.28rem 0;
+      padding-left: 1.35rem;
+      position: relative;
+    }
+
+    .card li::before {
+      content: "🌺";
+      position: absolute;
+      left: 0;
+      font-size: 0.85rem;
+    }
+
+    .attire-note {
+      background: linear-gradient(135deg, rgba(255,247,237,0.95), rgba(255,237,213,0.95));
+      border: 1px solid #fdba74;
+    }
+
+    .attire-note h3 {
+      color: #c2410c;
+    }
+
+    footer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 1.2rem 1rem 2.8rem;
+      font-size: 0.88rem;
+      color: var(--teal-dark);
+    }
+
+    footer strong {
+      color: var(--deep);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decorative beach elements -->
+  <div class="deco palm palm-1">🌴</div>
+  <div class="deco palm palm-2">🌴</div>
+  <div class="deco palm palm-3">🌴</div>
+  <div class="deco palm palm-4">🌴</div>
+
+  <div class="deco umbrella umbrella-1">⛱️</div>
+  <div class="deco umbrella umbrella-2">⛱️</div>
+
+  <div class="deco hat hat-1">👒</div>
+  <div class="deco hat hat-2">👒</div>
+
+  <div class="deco shell shell-1">🐚</div>
+  <div class="deco shell shell-2">🐚</div>
+  <div class="deco shell shell-3">🐚</div>
+
+  <div class="deco flower f1">🌺</div>
+  <div class="deco flower f2">🌸</div>
+  <div class="deco flower f3">🌺</div>
+  <div class="deco flower f4">🌼</div>
+
+  <!-- Soft wave at the bottom -->
+  <div class="waves">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="#0d9488" fill-opacity="0.25" d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,80C672,85,768,75,864,64C960,53,1056,43,1152,42.7C1248,43,1344,53,1392,58.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+      <path fill="#0f766e" fill-opacity="0.18" d="M0,80L60,74.7C120,69,240,59,360,58.7C480,59,600,69,720,74.7C840,80,960,80,1080,74.7C1200,69,1320,59,1380,53.3L1440,48L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
+    </svg>
+  </div>
+
+  <header>
+    <div class="company">Glorious Tribe Accounting Services</div>
+    <h1>Year End 2026</h1>
+    <div class="theme">Aloha Formal</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="event-title">Let's Celebrate Together</div>
+      <div class="dates">December 15 – 16, 2026</div>
+      <div class="venue">
+        <strong>The Lavender</strong><br>
+        Antipolo City
+      </div>
+
+      <div class="countdown-label">Countdown to the big day</div>
+      <div class="countdown" id="countdown">
+        <div class="count-box">
+          <div class="num" id="days">00</div>
+          <div class="label">Days</div>
+        </div>
+        <div class="count-box">
+          <div class="num" id="hours">00</div>
+          <div class="label">Hours</div>
+        </div>
+        <div class="count-box">
+          <div class="num" id="mins">00</div>
+          <div class="label">Mins</div>
+        </div>
+        <div class="count-box">
+          <div class="num" id="secs">00</div>
+          <div class="label">Secs</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="card">
+        <h3>📅 Event Details</h3>
+        <ul>
+          <li><strong>Date:</strong> Dec 15–16, 2026</li>
+          <li><strong>Venue:</strong> The Lavender, Antipolo City</li>
+          <li><strong>Company:</strong> Glorious Tribe Accounting Services</li>
+        </ul>
+      </div>
+
+      <div class="card attire-note">
+        <h3>👔 Dress Code</h3>
+        <p><strong>Aloha Formal</strong></p>
+        <p style="margin-top:0.5rem;">Formal attire with a tropical twist — elegant pieces mixed with Hawaiian prints, soft florals, or island-inspired accents. Look polished, look festive!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Glorious Tribe Accounting Services</strong><br>
+    Year End Celebration 2026 · Aloha Formal
+  </footer>
+
+  <script>
+    // Target: December 15, 2026 00:00:00
+    const targetDate = new Date("2026-12-15T00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("mins").textContent = "00";
+        document.getElementById("secs").textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("mins").textContent = String(mins).padStart(2, "0");
+      document.getElementById("secs").textContent = String(secs).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
